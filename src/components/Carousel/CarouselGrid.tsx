@@ -1,4 +1,4 @@
-import React, { FC, useState, Fragment } from 'react';
+import React, { FC, useState } from 'react';
 import { ICarouselWrapperProps, IGeometryType } from './CarouselWrapper';
 import { CarouselGridItem } from './CarouselGridItem';
 
@@ -32,9 +32,10 @@ export const CarouselGrid: FC<ICarouselProps> = props => {
     .map(i => <CarouselGridItem type={props.type} key={i.title} {...i} />);
 
   return (
-    <Fragment>
-      <button onClick={prev}>Previous page</button>
-      <button onClick={next}>Next page</button>
+    <div className='carousel-wrapper'>
+      <button className='carousel-control' onClick={prev}>
+        Previous page
+      </button>
       <div
         style={{
           gridTemplateColumns: `repeat(${props.columns}, 1fr`,
@@ -44,6 +45,9 @@ export const CarouselGrid: FC<ICarouselProps> = props => {
       >
         {gItems}
       </div>
-    </Fragment>
+      <button onClick={next} className='carousel-control'>
+        Next page
+      </button>
+    </div>
   );
 };

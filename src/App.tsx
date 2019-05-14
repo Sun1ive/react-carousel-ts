@@ -21,14 +21,11 @@ const App: React.FC = () => {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <CarouselWrapper
-          withKeyboard={false}
-          items={items}
-          type={CAROUSEL_TYPE.GROUPS}
-        />
-      </header>
+      <CarouselWrapper
+        withKeyboard={false}
+        items={items}
+        type={CAROUSEL_TYPE.LAGERS}
+      />
     </div>
   );
 };
