@@ -7,16 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .carousel-container {
   display: grid;
   grid-gap: 1rem;
   margin: 6px;
-  height: 760px;
+  width: 100%;
 }
 
 .grid-item {
@@ -24,4 +19,5 @@ code {
   justify-content: center;
   align-items: center;
   border: 1px solid rebeccapurple;
+  height: 200px;
 }
